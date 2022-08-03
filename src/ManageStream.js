@@ -99,14 +99,14 @@ const ManageStream = ({username, setError}) => {
           {!isLive &&
             <Box>
               <form onSubmit={startStream}>
-                <Heading as='h4' variant='heading30'>Create a Stream</Heading>
-                <Label htmlFor='streamName' required>Name your stream</Label>
+                <Heading as='h4' variant='heading30'>Create a stream</Heading>
+                <Label htmlFor='streamName' required>Where are you streaming from?</Label>
                   <Input
                     aria-describedby='stream_name_help_text'
                     id='streamName'
                     name='streamName'
                     type='text'
-                    placeholder='My first livestream'
+                    placeholder='Location Name - Your Name'
                     required/>
                   <Button variant='primary' type='submit' disabled={isLoading}>Start Stream</Button>
               </form>
