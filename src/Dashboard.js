@@ -67,7 +67,7 @@ const Dashboard = ({username, setUsername}) => {
               }
               {isStreaming &&
                 <Anchor onClick={() => setIsStreaming(false)}>
-                  Watch a stream
+                  Listen to a stream
                 </Anchor>
               }
             </Box>
