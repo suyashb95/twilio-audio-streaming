@@ -106,7 +106,7 @@ const ManageStream = ({username, setError}) => {
                     id='streamName'
                     name='streamName'
                     type='text'
-                    placeholder='Location Name - Your Name'
+                    placeholder='Location Name - Your Name (eg. Bar xyz - DJ John) '
                     required/>
                   <Button variant='primary' type='submit' disabled={isLoading}>Start Stream</Button>
               </form>
