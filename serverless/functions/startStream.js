@@ -40,12 +40,13 @@ exports.handler = async function(context, event, callback) {
     return callback(null, response);
   }
 
-  const playerStreamer = await twilioClient.media.playerStreamer.create({video: false});
+  const playerStreamer = await twilioClient.media.playerStreamer.create({video: false, maxDuration: 90000});
 
   const mediaProcessor = await twilioClient.media.mediaProcessor.create({
-    extension: 'audio-mixer-v1',
+    extension: 'audio-mixer-v2',
     extensionContext: JSON.stringify({
       identity: 'audio-mixer-v1',
+      audioBitrate: 192,
       room: {
         name: room.sid
       },
