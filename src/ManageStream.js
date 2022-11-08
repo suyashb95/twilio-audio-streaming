@@ -10,7 +10,7 @@ import { Column, Grid } from '@twilio-paste/core/grid';
 import { Label } from '@twilio-paste/core/label';
 import { Badge } from '@twilio-paste/core/badge';
 
-import { connect, createLocalAudioTrack } from 'twilio-video';
+import { connect } from 'twilio-video';
 import VideoRoom from './VideoRoom';
 
 const ManageStream = ({username, setError}) => {
@@ -47,7 +47,6 @@ const ManageStream = ({username, setError}) => {
 
       // Join the video room with audio only
       const videoRoom = await connect(result.token, {
-        audio: { noiseSuppression: false, echoCancellation: false, autoGainControl: false},
         name: result.streamDetails.roomId,
         audio: true
       });
