@@ -15,12 +15,15 @@ exports.handler = async function(context, event, callback) {
     const extensionContext = JSON.parse(stream.extensionContext);
     const playerStreamerId = extensionContext.outputs[0];
     const roomId = extensionContext.room.name;
+    const mediaProcessorId = stream.sid;
     const room = await twilioClient.video.rooms(roomId).fetch();
     const streamName = room.uniqueName;
 
     const streamDetails = {
       streamName,
-      playerStreamerId
+      playerStreamerId,
+      roomId,
+      mediaProcessorId
     }
 
     streamList.push(streamDetails)
