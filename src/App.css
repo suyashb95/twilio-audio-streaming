@@ -1,0 +1,16 @@
+*{                            /* not all components have each style specified but these should apply to all */
+  background-color: black;  
+  color: white; 
+  width: 100%;
+  text-align: center;
+}
+.css-lhd4qj{                  /* component "Anchor" */
+  text-decoration: none;      /* text underline needs to be removed and replaced with a "Button" component */                            
+  }
+
+.css-8s7yv8{                  /* component "Box" used when streams are available */
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 10px;
+  }
